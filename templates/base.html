@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo"><span class="icon"><img class="logo_img" src="{{ url_for('static', filename='health_logo.png') }}" alt="Health Logo"></span> Health</div>
+        <nav>
+            <a href="#">Язык</a>
+            <a href="#">Войти</a>
+            <a href="#">Регистрация</a>
+        </nav>
+    </header>
+
+    <main>
+        <aside>
+            <h3>Категории</h3>
+            <ul>
+                <li><a href="#">Сердечно-сосудистые</a></li>
+                <li><a href="#">Инфекционные заболевания</a></li>
+                <li><a href="#">Респираторные</a></li>
+            </ul>
+        </aside>
+        
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

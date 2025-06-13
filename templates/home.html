@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="content">
+    <div class="top-bar">
+        <div>
+            <h2>Просматривайте болезни и решения</h2>
+            <p>Пользователи могут публиковать болезни и добавлять решения</p>
+        </div>
+        <button>Опубликовать болезнь</button>
+    </div>
+
+    <div class="illnesses">
+        {% for illness in illnesses %}
+        <div class="card">
+            <img loading="lazy" src="{{ url_for('static', filename=illness.image) }}" alt="{{ illness.title }}">
+            <h4>{{ illness.title }}</h4>
+            <p><strong>Решение:</strong> {{ illness.solution }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
