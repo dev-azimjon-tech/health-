@@ -7,11 +7,12 @@
 </head>
 <body>
     <header>
-        <div class="logo"><span class="icon"><img class="logo_img" src="{{ url_for('static', filename='health_logo.png') }}" alt="Health Logo"></span> Health</div>
+        <div class="logo"><a href="{{ url_for('home') }}"><span class="icon"><img class="logo_img" src="{{ url_for('static', filename='health_logo.png') }}" alt="Health Logo"></span> Health</a></div>
         <nav>
             <a href="#">Язык</a>
             <a href="#">Войти</a>
             <a href="#">Регистрация</a>
+            <a href="{{ url_for('chat_ai') }}">Chat with AI</a>
         </nav>
     </header>
 
@@ -19,7 +20,7 @@
         <aside>
             <h3>Категории</h3>
             <ul>
-                <li><a href="#">Сердечно-сосудистые</a></li>
+                <li><a href="{{ url_for('heart_problems') }}">Сердечно-сосудистые</a></li>
                 <li><a href="#">Инфекционные заболевания</a></li>
                 <li><a href="#">Респираторные</a></li>
             </ul>
@@ -27,5 +28,6 @@
         
         {% block content %}{% endblock %}
     </main>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

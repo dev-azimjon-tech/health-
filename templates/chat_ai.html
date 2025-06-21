@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="sidebar">
+  <h3>🕒 Chat History</h3>
+  <div id="history"></div>
+</div>
+<div class="chat-container">
+  <div class="chat-header">🩺 Medical Chat AI</div>
+  <div class="chat-body" id="chat-body"></div>
+  <div class="chat-input">
+    <input type="text" id="input" placeholder="Describe your symptoms...">
+    <button onclick="sendMessage()">Send</button>
+  </div>
+</div>
+{% endblock %}
