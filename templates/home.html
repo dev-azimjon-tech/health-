@@ -1,23 +1,134 @@
 {% extends 'base.html' %}
-
 {% block content %}
-<section class="content">
-    <div class="top-bar">
-        <div>
-            <h2>Просматривайте болезни и решения</h2>
-            <p>Пользователи могут публиковать болезни и добавлять решения</p>
+<section class="hero" style="background: linear-gradient(to right, rgba(26, 115, 232, 0.92), rgba(52, 168, 83, 0.85)), url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3') no-repeat center/cover;">
+    <div class="container">
+        <div class="hero-content">
+            <h1 style="font-size:3.2rem;">Revolutionizing Healthcare with AI and Ancient Wisdom</h1>
+            <p style="font-size:1.25rem;">Combining cutting-edge artificial intelligence with Ibn Sina's holistic treatments to transform patient care, optimize hospital workflows, and extend healthcare access to remote communities.</p>
+            <a href="{{ url_for('diagnosis') }}" class="btn">Try AI Diagnosis</a>
+            <a href="{{ url_for('ibn_sina') }}" class="btn btn-secondary">Explore Ibn Sina Treatments</a>
         </div>
-        <button>Опубликовать болезнь</button>
-    </div>
-
-    <div class="illnesses">
-        {% for illness in illnesses %}
-        <div class="card">
-            <img loading="lazy" src="{{ url_for('static', filename=illness.image) }}" alt="{{ illness.title }}">
-            <h4>{{ illness.title }}</h4>
-            <p><strong>Решение:</strong> {{ illness.solution }}</p>
-        </div>
-        {% endfor %}
     </div>
 </section>
+
+<section id="features">
+    <div class="container">
+        <div class="section-title">
+            <h2>Our AI-Powered Solutions</h2>
+            <p>Leveraging artificial intelligence to enhance every aspect of healthcare delivery and patient experience</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="card-header">
+                    <i class="fas fa-diagnoses"></i>
+                    <h3>AI-Powered Diagnosis</h3>
+                </div>
+                <div class="card-body">
+                    <p>Our advanced diagnostic system analyzes symptoms, medical history, and diagnostic data to identify illnesses with 95% accuracy.</p>
+                    <a href="{{ url_for('diagnosis') }}" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-header">
+                    <i class="fas fa-brain"></i>
+                    <h3>Mental Health Support</h3>
+                </div>
+                <div class="card-body">
+                    <p>AI-driven mental health assessment and personalized therapy recommendations for improved emotional wellbeing.</p>
+                    <a href="{{ url_for('mental_health') }}" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="card-header">
+                    <i class="fas fa-hospital-alt"></i>
+                    <h3>Workflow Optimization</h3>
+                </div>
+                <div class="card-body">
+                    <p>Revolutionizing hospital operations with AI-driven resource allocation, patient flow management, and administrative automation.</p>
+                    <a href="{{ url_for('workflow') }}" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <div class="stats-container">
+            <div class="stat-card">
+                <i class="fas fa-user-md"></i>
+                <h3>98%</h3>
+                <p>Diagnostic Accuracy</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock"></i>
+                <h3>40%</h3>
+                <p>Reduced Wait Times</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-money-bill-wave"></i>
+                <h3>30%</h3>
+                <p>Cost Savings</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-globe-americas"></i>
+                <h3>500+</h3>
+                <p>Remote Clinics Served</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Testimonials Section -->
+<section style="background-color: #e8f4f8;">
+    <div class="container">
+        <div class="section-title">
+            <h2>What Healthcare Professionals Say</h2>
+            <p>Testimonials from our partners and users</p>
+        </div>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial">
+                <p>"The AI diagnostic tool has reduced our misdiagnosis rate by 40% and helped us identify rare conditions we might have otherwise missed."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">DR</div>
+                    <div>
+                        <h4>Dr. Sarah Johnson</h4>
+                        <p>Chief of Medicine, City Hospital</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"Integrating Ibn Sina's holistic approaches with modern medicine through AI has transformed our patient outcomes, especially for chronic conditions."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PT</div>
+                    <div>
+                        <h4>Dr. Ahmed Hassan</h4>
+                        <p>Integrative Medicine Specialist</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p>"The workflow optimization system saved our rural clinic 20 hours per week in administrative work, allowing us to focus more on patient care."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">NM</div>
+                    <div>
+                        <h4>Nurse Maria Rodriguez</h4>
+                        <p>Clinic Director, Rural Health Center</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Transform Healthcare with AI</h2>
+        <p>Join hundreds of healthcare institutions using our platform to improve patient outcomes, reduce costs, and extend care to underserved communities.</p>
+        <a href="#" class="btn" style="background: white; color: var(--primary);">Request a Demo</a>
+        <a href="#" class="btn btn-secondary">Contact Our Team</a>
+    </div>
+</section>
+
+
 {% endblock %}

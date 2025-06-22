@@ -1,15 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="sidebar">
-  <h3>🕒 Chat History</h3>
-  <div id="history"></div>
+<div id="chat-container">
+    <div id="chat-messages"></div>
+    <form id="chat-form">
+        <input type="text" id="user-input" autocomplete="off" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
 </div>
-<div class="chat-container">
-  <div class="chat-header">🩺 Medical Chat AI</div>
-  <div class="chat-body" id="chat-body"></div>
-  <div class="chat-input">
-    <input type="text" id="input" placeholder="Describe your symptoms...">
-    <button onclick="sendMessage()">Send</button>
-  </div>
-</div>
+<script>
+document.getElementById('chat-form').onsubmit = async function(e) {
+    e.preventDefault();
+    const input = document.getElementById('user-input');
+    const message = input.value;
+    if (!message) return;
+    const chat = document.getElementById('chat-messages');
+    chat.innerHTML += `<div class="user-msg"><b>You:</b> ${message}</div>`;
+    input.value = '';
+    const response = await fetch('/chat_ai', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({message})
+    });
+    const data = await response.json();
+    chat.innerHTML += `<div class="ai-msg"><b>AI:</b> ${data.reply}</div>`;
+    chat.scrollTop = chat.scrollHeight;
+};
+</script>
 {% endblock %}
