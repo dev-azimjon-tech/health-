@@ -1,71 +1,61 @@
-import requests
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, redirect, url_for, session, flash
+import hashlib
 
 app = Flask(__name__)
+app.secret_key = '312803237490827390573418957314895701734'  # Change this to a secure random value
 
-# OpenRouter API (free for light use)
-OPENROUTER_API_KEY = "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"  # Get one at https://openrouter.ai/
+# --- Mini "database" ---
+users_db = {}  # Format: {username: {'password': hashed_password, 'email': email}}
+
+def hash_password(password):
+    return hashlib.sha256(password.encode()).hexdigest()
 
 @app.route('/')
 def home():
     return render_template('home.html')
 
-@app.route('/diagnosis')
-def diagnosis():
-    return render_template('diagnosis.html')
-
-@app.route('/ibn_sina')
-def ibn_sina():
-    return render_template('ibn_sina.html')
-
-@app.route('/workflow')
-def workflow():
-    return render_template('workflow.html')
-
-@app.route('/mental_health')
-def mental_health():
-    return render_template('mental_health.html')
-
-@app.route('/rural_care')
-def rural_care():
-    return render_template('rural_care.html')
-
-@app.route('/chat_ai', methods=['GET', 'POST'])
-def chat_ai():
+@app.route('/register', methods=['GET', 'POST'])
+def register():
     if request.method == 'POST':
-        user_message = request.json.get('message', '')
+        username = request.form.get('username', '').strip()
+        email = request.form.get('email', '').strip()
+        password = request.form.get('password', '')
+        confirm = request.form.get('confirm', '')
 
-        # Call OpenRouter API (Mistral 7B Instruct)
-        headers = {
-            "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "model": "mistralai/mistral-7b-instruct",
-            "messages": [
-                {"role": "system", "content": "You are a helpful medical assistant."},
-                {"role": "user", "content": user_message}
-            ],
-            "max_tokens": 100
-        }
-        try:
-            response = requests.post(
-                "https://openrouter.ai/api/v1/chat/completions",
-                headers=headers,
-                json=payload,
-                timeout=20
-            )
-            if response.status_code == 200:
-                data = response.json()
-                ai_reply = data['choices'][0]['message']['content']
-            else:
-                ai_reply = "Sorry, the AI service is currently unavailable."
-        except Exception as e:
-            ai_reply = "Error contacting the AI service."
+        if not username or not email or not password or not confirm:
+            flash('Please fill in all fields.', 'danger')
+        elif '@' not in email or '.' not in email:
+            flash('Please enter a valid email address.', 'danger')
+        elif password != confirm:
+            flash('Passwords do not match.', 'danger')
+        elif username in users_db:
+            flash('Username already exists.', 'danger')
+        else:
+            users_db[username] = {'password': hash_password(password), 'email': email}
+            flash('Registration successful! Please log in.', 'success')
+            return redirect(url_for('login'))
+    return render_template('register.html')
 
-        return jsonify({'reply': ai_reply})
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        username = request.form.get('username', '').strip()
+        password = request.form.get('password', '')
 
-    return render_template('chat_ai.html')
+        user = users_db.get(username)
+        if user and user['password'] == hash_password(password):
+            session['username'] = username
+            flash('Logged in successfully!', 'success')
+            return redirect(url_for('home'))
+        else:
+            flash('Invalid username or password.', 'danger')
+    return render_template('login.html')
+
+@app.route('/logout')
+def logout():
+    session.pop('username', None)
+    flash('Logged out.', 'info')
+    return redirect(url_for('home'))
 
 if __name__ == '__main__':
     app.run(debug=True)
