@@ -1,0 +1,30 @@
+.home-main-div{
+    border: 1px solid black;
+    height: 500px;
+    width: 100%;
+}
+
+.main-text-div{
+    border: 1px solid red;
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.main-img-div{
+    border: 1px solid blue;
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+
+.main-img{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+}
+
+.main-text-div p{
+    font-size: 20px;
+    padding: 20px;
+}
