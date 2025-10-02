@@ -1,18 +1,18 @@
 .home-main-div{
-    border: 1px solid black;
-    height: 500px;
+    /* border: 1px solid black; */
+    height: 400px;
     width: 100%;
 }
 
 .main-text-div{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 100%;
     width: 50%;
     float: left;
 }
 
 .main-img-div{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     height: 100%;
     width: 50%;
     float: right;
@@ -27,4 +27,93 @@
 .main-text-div p{
     font-size: 20px;
     padding: 20px;
+   
 }
+
+.main-text-div h1{
+    font-size: 40px;
+    padding: 20px;
+    
+}
+
+.btn-chek-main{
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-left: 20%;
+}
+
+.home-main-div-2{
+    /* border: 1px solid black; */
+    height: 400px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.main-2-img-div{
+    /* border: 1px solid red; */
+    height: 100%;
+    width: 50%;
+    float: left;
+}
+
+.main-2-img-div img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main-2-text-div{
+    /* border: 1px solid blue; */
+    height: 100%;
+    width: 50%;
+    float: right;
+}
+
+.main-2-text-div h1{
+    font-size: 40px;
+    padding: 20px;
+}
+
+.main-2-text-div h4{
+    font-size: 20px;
+    padding: 20px;
+    margin-left: 7%;
+}
+
+.main-2-img {
+    border-radius: 10%;
+}
+
+.main-img{
+    border-radius: 10%;
+}
+
+.main-footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.main-footer .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.main-footer p {
+    margin: 0;
+    color: #6c757d;
+}
+.main-footer .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
