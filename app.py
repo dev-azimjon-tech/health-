@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
 
@@ -8,8 +8,30 @@ def home():
    return render_template("home.html")
 
 
-@app.route("/symp_checker")
-def symp_checker():
-   return render_template("symp_checker.html")
+
+
+@app.route("/chat")
+def chat():
+   """Render a minimal AI chat UI (frontend only)."""
+   return render_template("chat.html")
+
+
+@app.route("/api/chat", methods=["POST"])
+def api_chat():
+   """A minimal mock AI endpoint that returns a JSON reply.
+
+   This is intentionally simple and local-only. Replace with a real AI
+   service integration when ready (use environment variables for keys).
+   """
+   data = request.get_json(silent=True) or {}
+   message = (data.get("message") or "").strip()
+
+   if not message:
+      reply = "Please send a message."
+   else:
+      #TODO: Mock messages without using AI for common requests like: Backacke,sour throught.
+      reply = f"AI (demo): I received your message: \"{message}\".\nThis is a mock response for development." 
+
+   return jsonify({"reply": reply})
 if __name__ == "__main__":
     app.run(debug=True)

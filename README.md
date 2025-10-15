@@ -12,7 +12,9 @@ Key features
 - Minimal, mobile-friendly UI built with Flask templates and Tailwind CSS.
 - Optional premium / optimized model support (conceptual).
 
-Notes
+ Notes
+ 
+ New: A minimal AI Chat demo is available at the `/chat` route. It uses a local mock endpoint (`/api/chat`) which you can replace with a real AI service.
 
 - This repository is an educational/demo project. Do not rely on it for medical diagnosis.
 
@@ -76,7 +78,4 @@ Contributing
 License
 
 Add a license file (e.g., `LICENSE`) if you want to publish or share this project publicly.
-
 ---
-
-If you'd like, I can also add a `requirements.txt` with pinned versions and improve the test coverage or CI configuration.

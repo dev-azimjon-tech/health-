@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="max-w-3xl mx-auto p-6">
+  <h1 class="text-2xl font-semibold mb-4">AI Chat (Demo)</h1>
+
+  <div id="chatBox" class="bg-white rounded-lg shadow p-4 h-80 overflow-y-auto mb-4">
+    <!-- messages will appear here -->
+  </div>
+
+  <form id="chatForm" class="flex gap-2">
+    <input id="messageInput" type="text" placeholder="Type your message..." class="flex-1 border rounded px-3 py-2" />
+    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
+  </form>
+</div>
+
+<script>
+const chatBox = document.getElementById('chatBox');
+const form = document.getElementById('chatForm');
+const input = document.getElementById('messageInput');
+
+function appendMessage(who, text) {
+  const el = document.createElement('div');
+  el.className = who === 'user' ? 'text-right mb-2' : 'text-left mb-2';
+  el.innerHTML = `<div class="inline-block ${who === 'user' ? 'bg-green-100 text-green-900' : 'bg-gray-100 text-gray-900'} rounded px-3 py-2">${text.replace(/\n/g, '<br>')}</div>`;
+  chatBox.appendChild(el);
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const message = input.value.trim();
+  if (!message) return;
+  appendMessage('user', message);
+  input.value = '';
+
+  try {
+    const res = await fetch('/api/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message })
+    });
+    const data = await res.json();
+    appendMessage('ai', data.reply || 'No reply');
+  } catch (err) {
+    appendMessage('ai', 'Error: could not reach the chat endpoint.');
+  }
+});
+</script>
+
+{% endblock %}
