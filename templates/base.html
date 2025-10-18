@@ -4,22 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-  <title>Symphtom Checker</title>
+  <title>Symptom Checker</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50">
 
   <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
    
-    <div class="text-2xl font-bold text-green-600"><a href="{{ url_for('home') }}">Health<span class="text-gray-800">Care</a></span></div>
+  <div class="text-2xl font-bold text-green-600"><a href="{{ url_for('home') }}">Health<span class="text-gray-800">Care</span></a></div>
 
     <ul class="flex space-x-6 text-gray-700 font-medium">
       <li><a href="{{ url_for('home') }}" class="hover:text-green-600">Home</a></li>
+      <li><a href="{{ url_for('chat') }}" class="hover:text-green-600">Chat</a></li>
       <li><a href="#" class="hover:text-green-600">Drugs</a></li>
       <li><a href="#" class="hover:text-green-600">About</a></li>
   <li><a href="#" class="hover:text-green-600">Contact</a></li>
   <li><a href="#" class="hover:text-green-600">HealthCare Blog</a></li>
-  <li><a href="{{ url_for('chat') }}" class="hover:text-green-600">Chat</a></li>
         </ul>
       </nav>
 

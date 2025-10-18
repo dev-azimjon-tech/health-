@@ -3,9 +3,7 @@
 <div class="max-w-3xl mx-auto p-6">
   <h1 class="text-2xl font-semibold mb-4">AI Chat (Demo)</h1>
 
-  <div id="chatBox" class="bg-white rounded-lg shadow p-4 h-80 overflow-y-auto mb-4">
-    <!-- messages will appear here -->
-  </div>
+  <div id="chatBox" class="bg-white rounded-lg shadow p-4 h-80 overflow-y-auto mb-4"></div>
 
   <form id="chatForm" class="flex gap-2">
     <input id="messageInput" type="text" placeholder="Type your message..." class="flex-1 border rounded px-3 py-2" />
@@ -39,7 +37,13 @@ form.addEventListener('submit', async (e) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ message })
     });
-    const data = await res.json();
+    let data;
+    try {
+      data = await res.json();
+    } catch (parseErr) {
+      appendMessage('ai', 'Error: invalid JSON response from server.');
+      return;
+    }
     appendMessage('ai', data.reply || 'No reply');
   } catch (err) {
     appendMessage('ai', 'Error: could not reach the chat endpoint.');

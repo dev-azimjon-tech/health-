@@ -12,7 +12,6 @@ def home():
 
 @app.route("/chat")
 def chat():
-   """Render a minimal AI chat UI (frontend only)."""
    return render_template("chat.html")
 
 
@@ -28,9 +27,10 @@ def api_chat():
 
    if not message:
       reply = "Please send a message."
-   else:
-      #TODO: Mock messages without using AI for common requests like: Backacke,sour throught.
-      reply = f"AI (demo): I received your message: \"{message}\".\nThis is a mock response for development." 
+   elif "backache" in message.lower() or "backache" in message.lower():
+      reply = "Backache solution test message"
+   else:         
+      reply = f"AI (demo): I received your message: \"{message}\".\nThis is a mock response for development."
 
    return jsonify({"reply": reply})
 if __name__ == "__main__":

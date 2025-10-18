@@ -15,5 +15,5 @@ def test_home_route_status(client):
 def test_home_route_content(client):
     "Home route should contain specific content"
     response = client.get("/")
-    assert b"Health+ The AI Symphtom Checker" in response.data
+    assert b"Health+ The AI Symptom Checker" in response.data
     
