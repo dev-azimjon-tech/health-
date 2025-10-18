@@ -13,7 +13,7 @@ Key features
 - Optional premium / optimized model support (conceptual).
 
  Notes
- 
+
  New: A minimal AI Chat demo is available at the `/chat` route. It uses a local mock endpoint (`/api/chat`) which you can replace with a real AI service.
 
 - This repository is an educational/demo project. Do not rely on it for medical diagnosis.
@@ -74,8 +74,3 @@ Project layout
 Contributing
 
 - Feel free to open issues or PRs. When adding features that call external AI or medical APIs, ensure you do not commit API keys or secrets. Use environment variables or a local config file ignored by git.
-
-License
-
-Add a license file (e.g., `LICENSE`) if you want to publish or share this project publicly.
----
