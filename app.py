@@ -1,14 +1,27 @@
 from flask import Flask, render_template, request, jsonify
+import os
+import json
 
 app = Flask(__name__)
 
+DRUGS_FILE = "drugs.json"
+
+
+
+def load_drugs():
+    if os.path.exists(DRUGS_FILE):
+        with open(DRUGS_FILE, "r") as f:
+            return json.load(f)
+    return []
 
 @app.route("/")
 def home():
    return render_template("home.html")
 
 
-
+@app.route("/drugs")
+def drugs():
+    return render_template("drugs.html")
 
 @app.route("/chat")
 def chat():

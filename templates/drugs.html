@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="drugs-main-container">
+
+  <div class="intro-section">
+    <h1 class="page-title">Drug Information Finder</h1>
+    <p class="page-subtitle">
+      Type the name of a medicine or drug below to learn about its purpose, dosage, and side effects.
+      This feature helps users understand their medications better — it’s for educational use only,
+      not for medical diagnosis.
+    </p>
+  </div>
+
+  <div class="search-section">
+    <input type="text" id="drugSearchInput" class="drug-search-input" placeholder="Enter drug name (e.g., Paracetamol, Ibuprofen)">
+    <button class="drug-search-btn">Search</button>
+  </div>
+
+  <div class="results-section">
+    <div class="a-info">
+      <h2>Drug Information</h2>
+      <p id="drugInfo">Search for a drug to see details here.</p>
+    </div>
+    <div class="b-info">
+      <h2>How to Use</h2>
+      <p>
+        Enter the name of a drug above. The system will display:
+      </p>
+      <ul>
+        <li>💊 Description and medical use</li>
+        <li>⚠️ Common side effects</li>
+        <li>🕐 Recommended dosage (if available)</li>
+        <li>📖 Tips for safe use</li>
+      </ul>
+      <p class="note">This feature is currently a demo. AI-powered search will be added soon.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
