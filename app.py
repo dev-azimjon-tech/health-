@@ -1,10 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 import os
+import google.generativeai as genai
 import json
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = Flask(__name__)
 
 DRUGS_FILE = "drugs.json"
+#I will add the api key to .env file
+
+API_KEY = os.getenv('AI_API_KEY')
+
 
 
 def load_drugs():
@@ -17,6 +25,7 @@ def load_drugs():
 @app.route("/")
 def home():
     return render_template("home.html")
+
 
 
 @app.route("/drugs", methods=["GET"])
@@ -35,24 +44,31 @@ def drugs():
 
 
 @app.route("/chat")
-def chat():
+def chat_route():
     return render_template("chat.html")
 
 
 @app.route("/api/chat", methods=["POST"])
-def api_chat():
-    data = request.get_json(silent=True) or {}
-    message = (data.get("message") or "").strip()
+def chat():
+    data = request.json
+    user_message = data.get("message", "").strip()
 
-    if not message:
-        reply = "Please send a message."
-    elif "backache" in message.lower():
-        reply = "Backache solution test message"
-    else:
-        reply = f"AI (demo): I received your message: \"{message}\".\nThis is a mock response for development."
+    if not user_message:
+        return jsonify({"reply": "Please provide a message."})
 
-    return jsonify({"reply": reply})
+    try:
+        response = genai.chat.create(
+            model="chat-bison-001",
+            messages=[
+                {"role": "user", "content": user_message}
+            ]
+        )
 
+        ai_reply = response.last["content"] if response.last else "No response from AI."
+        return jsonify({"reply": ai_reply})
+
+    except Exception as e:
+        return jsonify({"reply": f"Error: {str(e)}"})
 
 if __name__ == "__main__":
     app.run(debug=True)
