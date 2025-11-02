@@ -17,9 +17,7 @@
       <li><a href="{{ url_for('home') }}" class="hover:text-green-600">Home</a></li>
       <li><a href="{{ url_for('chat_page') }}" class="hover:text-green-600">Chat</a></li>
       <li><a href="{{ url_for('drugs') }}" class="hover:text-green-600">Drugs</a></li>
-      <li><a href="#" class="hover:text-green-600">About</a></li>
-  <li><a href="#" class="hover:text-green-600">Contact</a></li>
-  <li><a href="#" class="hover:text-green-600">HealthCare Blog</a></li>
+      <li><a href="{{ url_for('about_page') }}" class="hover:text-green-600">About</a></li>
         </ul>
       </nav>
 
@@ -28,9 +26,9 @@
     <div class="footer-content">
         <p>&copy; 2025 HealthCare. All rights reserved.</p>
         <ul class="footer-links">
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-            <li><a href="#">Contact Us</a></li>
+            <li><a href="{{ url_for('about_page') }}#privacy">Privacy Policy</a></li>
+            <li><a href="{{ url_for('about_page') }}#terms">Terms of Service</a></li>
+            <li><a href="{{ url_for('about_page') }}#contact">Contact Us</a></li>
         </ul>
     </div>
 </footer>
