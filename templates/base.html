@@ -7,30 +7,48 @@
   <title>Symptom Checker</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50">
+<body>
 
-  <nav class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+  <header class="header">
+    <a href="{{ url_for('home') }}" class="logo">HealthCare</a>
+    <nav class="main-nav">
+      <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('chat_page') }}">Chat</a></li>
+        <li><a href="{{ url_for('drugs') }}">Drugs</a></li>
+        <li><a href="{{ url_for('about_page') }}">About</a></li>
+      </ul>
+    </nav>
+    <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+  </header>
 
-  <div class="text-2xl font-bold text-green-600"><a href="{{ url_for('home') }}">Health<span class="text-gray-800">Care</span></a></div>
+  <nav class="mobile-nav">
+    <a href="{{ url_for('home') }}">Home</a>
+    <a href="{{ url_for('chat_page') }}">Chat</a>
+    <a href="{{ url_for('drugs') }}">Drugs</a>
+    <a href="{{ url_for('about_page') }}">About</a>
+  </nav>
 
-    <ul class="flex space-x-6 text-gray-700 font-medium">
-      <li><a href="{{ url_for('home') }}" class="hover:text-green-600">Home</a></li>
-      <li><a href="{{ url_for('chat_page') }}" class="hover:text-green-600">Chat</a></li>
-      <li><a href="{{ url_for('drugs') }}" class="hover:text-green-600">Drugs</a></li>
-      <li><a href="{{ url_for('about_page') }}" class="hover:text-green-600">About</a></li>
-        </ul>
-      </nav>
+  <main>
+    {% block content %} {% endblock %}
+  </main>
 
-{% block content %} {% endblock %}
-<footer class="main-footer">
-    <div class="footer-content">
-        <p>&copy; 2025 HealthCare. All rights reserved.</p>
-        <ul class="footer-links">
-            <li><a href="{{ url_for('about_page') }}#privacy">Privacy Policy</a></li>
-            <li><a href="{{ url_for('about_page') }}#terms">Terms of Service</a></li>
-            <li><a href="{{ url_for('about_page') }}#contact">Contact Us</a></li>
-        </ul>
-    </div>
-</footer>
+  <footer class="footer">
+    <p>&copy; 2025 HealthCare. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const mobileNav = document.querySelector('.mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('is-active');
+        mobileNav.classList.toggle('is-active');
+    });
+  </script>
 </body>
 </html>

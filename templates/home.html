@@ -1,28 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="home-main-div">
-    <div class="main-text-div">
-    <h1>Health+ The AI Symptom Checker</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In adipisci voluptatem voluptate. Ipsam quidem exercitationem sapiente sequi, laborum aperiam ex tempora? Modi amet autem aperiam quam, reprehenderit rerum voluptates similique.</p>
-        <br>
-        <a href="{{ url_for('chat_page') }}" class="btn-chek-main">Check Symptoms</a>
+<div class="hero">
+    <div class="hero-text">
+        <h1>Health+ The AI Symptom Checker</h1>
+        <p>Your personal health assistant, available 24/7. Get instant insights into your symptoms and find relevant drug information.</p>
+        <a href="{{ url_for('chat_page') }}" class="btn-check-main">Check Symptoms</a>
     </div>
-
-    <div class="main-img-div">
-        <img src="{{ url_for('static', filename='images/healthcare.jpg') }}" alt="Healthcare Image" class="main-img">
+    <div class="hero-image">
+        <img src="{{ url_for('static', filename='images/healthcare.jpg') }}" alt="Healthcare Image">
     </div>
 </div>
 
-<div class="home-main-div-2">
-    <div class="main-2-img-div">
-        <img src="{{ url_for('static', filename='images/ai-health.jpg') }}" alt="AI Image" class="main-2-img">
+<div class="features">
+    <div class="feature">
+        <h3>Advanced AI Technology</h3>
+        <p>Accurate symptom analysis using cutting-edge AI.</p>
     </div>
-
-    <div class="main-2-text-div">
-        <h1>Why Should You Use Health+?</h1>
-        <h3>1. Advanced AI Technology for Accurate Symptom Analysis</h3>
-        <h3>2. Comprehensive Drug Information Database</h3>
-        <h3>3. 24/7 Available Medical Chat Assistant</h3>
+    <div class="feature">
+        <h3>Drug Information</h3>
+        <p>A comprehensive database of drugs and their uses.</p>
+    </div>
+    <div class="feature">
+        <h3>24/7 Medical Chat</h3>
+        <p>Your personal health assistant, available anytime.</p>
     </div>
 </div>
 {% endblock %}

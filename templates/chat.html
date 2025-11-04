@@ -1,15 +1,13 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="max-w-3xl mx-auto p-6">
-
-  <h1 class="text-2xl font-semibold mb-4">AI Chat</h1>
-  <h3 class="text-1xl font-bold mb-3">Write your Symptoms correct with context.</h3>
-  <div id="chatBox" class="bg-white rounded-lg shadow p-4 h-80 overflow-y-auto mb-4"></div>
-
-  <form id="chatForm" class="flex gap-2">
-    <input id="messageInput" type="text" placeholder="Type your message..." class="flex-1 border rounded px-3 py-2" />
-    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Send</button>
-  </form>
+<div class="chat-container">
+    <h1>AI Chat</h1>
+    <p>Write your Symptoms correct with context.</p>
+    <div id="chatBox" class="chat-box"></div>
+    <form id="chatForm" class="chat-form">
+        <input id="messageInput" type="text" placeholder="Type your message...">
+        <button type="submit">Send</button>
+    </form>
 </div>
 
 <script>
