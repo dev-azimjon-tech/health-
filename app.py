@@ -42,15 +42,11 @@ def drugs():
 
     result = None
     if query:
-        # Get all drug names
         drug_names = [d["name"] for d in all_drugs]
-        # Find closest matches
         matches = get_close_matches(query, drug_names, n=1, cutoff=0.6)
         
         if matches:
-            # Get the best match
             best_match = matches[0]
-            # Find the drug with this name
             for d in all_drugs:
                 if d["name"] == best_match:
                     result = d

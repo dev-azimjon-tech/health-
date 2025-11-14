@@ -21,19 +21,56 @@
 </div>
 
 <div class="about-container-2">
-    <div class="about-mission">
-        <div class="about-mission-content">
-            <h2>Our Missions</h2>
-            <ul>
-                <li>Innovate continuously to provide the best solutions.</li>
-                <li>Foster a collaborative and inclusive work environment.</li>
-                <li>Deliver exceptional value to our customers.</li>
-            </ul>
-        </div>
+</div>
+
+<div class="about-container-2">
+    <section class="about-mission" aria-labelledby="mission-heading">
         <div class="about-mission-image">
-            <img src="https://via.placeholder.com/400" alt="image-11">
+            <img src="{{ url_for('static', filename='images/mission-health-img.jpeg') }}" alt="Illustration of our mission">
         </div>
-    </div>
+
+        <div class="about-mission-content">
+            <h2 id="mission-heading">Our Mission</h2>
+            <p class="lead">We design and build thoughtful products that improve health outcomes — by focusing on people, quality, and collaboration.</p>
+
+            <div class="mission-cards" role="list">
+                <article class="mission-card" role="listitem">
+                    <div class="mission-icon" aria-hidden="true">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18h6" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10 22h4" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 2a6 6 0 00-4 10.5V15a2 2 0 002 2h4a2 2 0 002-2v-2.5A6 6 0 0012 2z" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Innovate</h3>
+                    <p>We embrace creativity and continuous improvement to deliver meaningful solutions.</p>
+                </article>
+
+                <article class="mission-card" role="listitem">
+                    <div class="mission-icon" aria-hidden="true">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 21v-2a4 4 0 00-4-4H7a4 4 0 00-4 4v2" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <circle cx="9" cy="7" r="4" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 3.13a4 4 0 010 7.75" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Collaborate</h3>
+                    <p>We work across disciplines to build inclusive products that serve everyone.</p>
+                </article>
+
+                <article class="mission-card" role="listitem">
+                    <div class="mission-icon" aria-hidden="true">
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 6L9 17l-5-5" stroke="#0f172a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Deliver Value</h3>
+                    <p>We measure success by the positive impact we deliver to users and partners.</p>
+                </article>
+            </div>
+        </div>
+    </section>
 </div>
 
 {% endblock %}
