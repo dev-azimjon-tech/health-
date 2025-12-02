@@ -54,6 +54,7 @@ def drugs():
 
     return render_template("drugs.html", drug=result)
 
+# To-DO: Set a AI API
 @app.route("/chat")
 def chat_page():
     return render_template("chat.html")
