@@ -1,0 +1,142 @@
+[
+  {
+    "name": "Paracetamol (acetaminophen)",
+    "description_and_medical_use": "Analgesic and antipyretic used to relieve pain (headache, toothache, muscle pain) and reduce fever.",
+    "common_side_effects": "Rare allergic reactions; liver damage with overdose or chronic excessive use.",
+    "recommended_dosage": "Adults: 500 mg–1 g every 4–6 hours as needed; maximum commonly 3–4 g (3000–4000 mg) per 24 hours depending on guidance and product.",
+    "tips_for_safe_use": "Do not take with other products containing paracetamol. Reduce dose or avoid if severe liver disease or heavy alcohol use. Read product leaflet."
+  },
+  {
+    "name": "Ibuprofen",
+    "description_and_medical_use": "Non-steroidal anti-inflammatory drug (NSAID) for pain, inflammation and fever (e.g. muscle pain, menstrual pain).",
+    "common_side_effects": "Stomach upset, heartburn, headache, dizziness; increased risk of gastrointestinal bleeding and fluid retention; can raise blood pressure.",
+    "recommended_dosage": "Adults: 200–400 mg every 4–6 hours as needed; maximum commonly 1,200–2,400 mg/day depending on product and supervision.",
+    "tips_for_safe_use": "Take with food to reduce stomach upset. Avoid if history of peptic ulcer, uncontrolled high blood pressure, or advanced heart failure unless advised by a doctor."
+  },
+  {
+    "name": "Amoxicillin",
+    "description_and_medical_use": "A commonly used penicillin antibiotic for many bacterial infections (ear, throat, chest, urinary, skin).",
+    "common_side_effects": "Nausea, diarrhea, rash; rare allergic (anaphylactic) reactions in penicillin-allergic patients.",
+    "recommended_dosage": "Typical adult dose: 250–500 mg every 8 hours or 500–875 mg every 12 hours (depending on infection and local guidance).",
+    "tips_for_safe_use": "Complete the full prescribed course even if you feel better. Tell the prescriber of any penicillin allergy. Avoid unnecessary use to limit resistance."
+  },
+  {
+    "name": "Amoxicillin-clavulanate (co-amoxiclav)",
+    "description_and_medical_use": "Broad-spectrum antibiotic (amoxicillin combined with a beta-lactamase inhibitor) for bacterial infections resistant to amoxicillin alone.",
+    "common_side_effects": "Diarrhea, nausea, rash, rarely liver enzyme changes.",
+    "recommended_dosage": "Depends on formulation; common adult regimens include 500/125 mg every 8 hours or 875/125 mg every 12 hours.",
+    "tips_for_safe_use": "Take with food to reduce stomach upset; use only when prescribed; report persistent diarrhea."
+  },
+  {
+    "name": "Ciprofloxacin",
+    "description_and_medical_use": "A fluoroquinolone antibiotic used for certain serious bacterial infections (e.g., complicated urinary tract infections, some GI infections).",
+    "common_side_effects": "Nausea, dizziness, tendon pain (rare but serious), possible photosensitivity, CNS effects.",
+    "recommended_dosage": "Typical adult doses vary by infection: often 250–750 mg every 12 hours; follow prescriber instructions.",
+    "tips_for_safe_use": "Avoid unnecessary use; report tendon pain or unusual muscle weakness immediately; may interact with some minerals (separate antacids/calcium/iron)."
+  },
+  {
+    "name": "Metronidazole",
+    "description_and_medical_use": "Antibiotic/antiprotozoal used for anaerobic bacterial infections and protozoal infections (e.g., bacterial vaginosis, giardiasis) and some dental infections.",
+    "common_side_effects": "Nausea, metallic taste, headache; rarely neurological effects with long use.",
+    "recommended_dosage": "Typical adult regimens vary; for many infections 400–500 mg every 8–12 hours for a specified course.",
+    "tips_for_safe_use": "Avoid alcohol during treatment and for 48 hours after finishing (can cause flushing/ nausea). Complete full course."
+  },
+  {
+    "name": "Azithromycin",
+    "description_and_medical_use": "Macrolide antibiotic used for respiratory infections, some sexually transmitted infections, and other bacterial infections.",
+    "common_side_effects": "Diarrhea, nausea, abdominal pain; rarely heart rhythm changes (QT prolongation).",
+    "recommended_dosage": "Common adult course: 500 mg on day 1 then 250 mg once daily on days 2–5 (regimens vary by indication).",
+    "tips_for_safe_use": "Tell prescriber about any heart problems or medicines that affect heart rhythm. Use only as prescribed."
+  },
+  {
+    "name": "Metformin",
+    "description_and_medical_use": "First-line oral medication for type 2 diabetes to lower blood glucose by reducing hepatic glucose production and improving insulin sensitivity.",
+    "common_side_effects": "Gastrointestinal upset (nausea, diarrhea) is common; rare risk of lactic acidosis in severe kidney impairment.",
+    "recommended_dosage": "Typical starting dose 500 mg once or twice daily with meals; usual maintenance 500–2000 mg/day (often up to 2,000 mg daily); follow prescriber.",
+    "tips_for_safe_use": "Take with food to reduce GI effects. Check kidney function before starting and periodically. Stop temporarily if vomiting/diarrhea or before iodinated contrast unless advised."
+  },
+  {
+    "name": "Glibenclamide (glyburide)",
+    "description_and_medical_use": "A sulfonylurea oral antidiabetic agent that increases insulin release from the pancreas; used in type 2 diabetes.",
+    "common_side_effects": "Hypoglycaemia (low blood sugar), weight gain, nausea.",
+    "recommended_dosage": "Typical adult doses vary (e.g., 2.5–5 mg once daily, adjusted to effect); follow prescriber and local formularies.",
+    "tips_for_safe_use": "Monitor blood glucose regularly. Be aware of signs of hypoglycaemia and carry a fast-acting sugar source. Use with caution in elderly and those with renal impairment."
+  },
+  {
+    "name": "Enalapril",
+    "description_and_medical_use": "ACE inhibitor used to treat high blood pressure and heart failure.",
+    "common_side_effects": "Dizziness (especially on first dose), dry cough, elevated potassium, rare angioedema.",
+    "recommended_dosage": "Typical starting dose 2.5–5 mg once daily; maintenance commonly 5–20 mg daily depending on condition.",
+    "tips_for_safe_use": "Monitor blood pressure and kidney function, and potassium. Avoid during pregnancy."
+  },
+  {
+    "name": "Atenolol",
+    "description_and_medical_use": "Beta-blocker for hypertension, angina and heart rate control.",
+    "common_side_effects": "Tiredness, cold extremities, slow heart rate; may worsen asthma/COPD symptoms in some.",
+    "recommended_dosage": "Typical adult dose 25–100 mg once daily depending on indication.",
+    "tips_for_safe_use": "Do not stop suddenly; discuss with prescriber if you have breathing problems or diabetes (can mask hypoglycaemia)."
+  },
+  {
+    "name": "Furosemide",
+    "description_and_medical_use": "Loop diuretic used to treat edema (fluid overload) and some cases of hypertension.",
+    "common_side_effects": "Increased urination, electrolyte disturbances (low potassium, low magnesium), dizziness, dehydration.",
+    "recommended_dosage": "Typical adult oral dose 20–80 mg once daily (may be higher for some conditions); dosing individualized.",
+    "tips_for_safe_use": "Monitor electrolytes and kidney function. Be cautious about dehydration and orthostatic dizziness; take in morning if possible."
+  },
+  {
+    "name": "Omeprazole",
+    "description_and_medical_use": "Proton pump inhibitor (PPI) used for gastro-oesophageal reflux disease (GERD), peptic ulcers, and to prevent NSAID-related ulcers.",
+    "common_side_effects": "Headache, abdominal pain, nausea; long-term use associated with increased risk of fractures, B12 deficiency, and infections (e.g., C. difficile) in some.",
+    "recommended_dosage": "Typical adult dose 20 mg once daily for many indications; higher doses for some conditions.",
+    "tips_for_safe_use": "Use the lowest effective dose for the shortest necessary time. Discuss long-term use risks with clinician."
+  },
+  {
+    "name": "Pantoprazole",
+    "description_and_medical_use": "Proton pump inhibitor similar to omeprazole used for acid-related stomach problems (GERD, ulcers).",
+    "common_side_effects": "Headache, abdominal pain, diarrhea; long-term risks similar to other PPIs.",
+    "recommended_dosage": "Common adult dose 20–40 mg once daily depending on indication.",
+    "tips_for_safe_use": "Follow same precautions as for other PPIs; check with doctor about long-term use."
+  },
+  {
+    "name": "Salbutamol (albuterol) inhaler",
+    "description_and_medical_use": "Short-acting bronchodilator used to relieve acute asthma symptoms and wheeze (rescue inhaler).",
+    "common_side_effects": "Tremor, increased heart rate, nervousness, throat irritation.",
+    "recommended_dosage": "Normal rescue dose: 1–2 puffs when needed; can be repeated (commonly up to 4 times in 24 hours for routine use; acute attacks may require different guidance).",
+    "tips_for_safe_use": "Learn correct inhaler technique (use a spacer if available for children). Seek urgent care for severe breathlessness. Keep inhaler accessible."
+  },
+  {
+    "name": "Gentamicin (injectable)",
+    "description_and_medical_use": "Aminoglycoside antibiotic for serious Gram-negative infections, often used in hospitals (injectable).",
+    "common_side_effects": "Kidney toxicity, hearing (vestibular/cochlear) toxicity; careful monitoring required.",
+    "recommended_dosage": "Dose varies by weight, renal function and indication (usually given by injection); use only under hospital / prescriber guidance.",
+    "tips_for_safe_use": "Requires monitoring of kidney function and sometimes drug levels. Not for routine outpatient use without supervision."
+  },
+  {
+    "name": "Atorvastatin",
+    "description_and_medical_use": "Statin used to lower cholesterol and reduce cardiovascular risk.",
+    "common_side_effects": "Muscle aches, elevated liver enzymes (rare serious muscle injury), GI upset.",
+    "recommended_dosage": "Typical adult starting dose 10–20 mg once daily; maintenance 10–80 mg once daily depending on target and risk.",
+    "tips_for_safe_use": "Have baseline and periodic liver tests as advised. Report unexplained muscle pain or weakness."
+  },
+  {
+    "name": "Doxycycline",
+    "description_and_medical_use": "Tetracycline antibiotic used for respiratory infections, some skin infections, malaria prophylaxis, and other indications.",
+    "common_side_effects": "Photosensitivity (sunburn easier), GI upset, tooth discoloration in children if used during tooth development.",
+    "recommended_dosage": "Typical adult dose 100 mg every 12 hours for many infections; malaria prophylaxis and other regimens differ.",
+    "tips_for_safe_use": "Avoid in pregnancy and young children (tooth staining). Use sun protection; take with water and avoid lying down immediately after taking to reduce esophageal irritation."
+  },
+  {
+    "name": "Fluconazole",
+    "description_and_medical_use": "Antifungal used for many fungal infections (e.g., vaginal candidiasis, some systemic fungal infections).",
+    "common_side_effects": "Nausea, headache, elevated liver enzymes (rare hepatotoxicity).",
+    "recommended_dosage": "For uncomplicated vaginal thrush: single 150 mg dose orally; other infections require different dosing.",
+    "tips_for_safe_use": "Check for liver disease and drug interactions (e.g., certain statins or warfarin). Use as directed by clinician."
+  },
+  {
+    "name": "Loratadine",
+    "description_and_medical_use": "Second-generation oral antihistamine for allergic rhinitis and urticaria (less sedating than older antihistamines).",
+    "common_side_effects": "Headache, dry mouth, rarely drowsiness.",
+    "recommended_dosage": "Adults: 10 mg once daily (or as per product).",
+    "tips_for_safe_use": "Generally non-sedating; avoid combining with other antihistamines unless advised. Safe for many people but check interactions."
+  }
+]

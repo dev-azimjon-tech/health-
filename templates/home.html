@@ -5,24 +5,24 @@
     <h1>Health+ The AI Symptom Checker</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In adipisci voluptatem voluptate. Ipsam quidem exercitationem sapiente sequi, laborum aperiam ex tempora? Modi amet autem aperiam quam, reprehenderit rerum voluptates similique.</p>
         <br>
-        <a href="{{ url_for('chat') }}" class="btn-chek-main">Check Symptoms</a>
+        <a href="{{ url_for('chat_page') }}" class="btn-chek-main">Check Symptoms</a>
     </div>
 
     <div class="main-img-div">
-        <img src="https://symptomchecker.isabelhealthcare.com/assets/pre/home_1a-c0b885bd97408b9d4437625c30bbb92113ccd90ab2bc5057ae9d1c29d6f8d979.jpg" alt="Healthcare Image" class="main-img">
+        <img src="{{ url_for('static', filename='images/health-img1.jpg') }}" alt="Healthcare Image" class="main-img">
     </div>
 </div>
 
 <div class="home-main-div-2">
     <div class="main-2-img-div">
-        <img src="https://symptomchecker.isabelhealthcare.com/assets/pre/home_2a-5f774e5b21633bfd561c26e94a877b6ecd7c0e0177dfd65f9f407d4e4607959d.jpg" alt="AI Image" class="main-2-img">
+        <img src="{{ url_for('static', filename='images/health-img2.jpg') }}" alt="AI Image" class="main-2-img">
     </div>
 
     <div class="main-2-text-div">
         <h1>Why Should You Use Health+?</h1>
-        <h4>1.Example Text 1</h4>
-        <h4>2.Example Text 2</h4>
-        <h4>3.Example Text 3</h4>
+        <h3>1. Advanced AI Technology for Accurate Symptom Analysis</h3>
+        <h3>2. Comprehensive Drug Information Database</h3>
+        <h3>3. 24/7 Available Medical Chat Assistant</h3>
     </div>
 </div>
 {% endblock %}
