@@ -6,7 +6,7 @@ app.secret_key = '312803237490827390573418957314895701734'  # Change this to a s
 
 # --- Mini "database" ---
 users_db = {}  # Format: {username: {'password': hashed_password, 'email': email}}
-
+admin_db = {}
 def hash_password(password):
     return hashlib.sha256(password.encode()).hexdigest()
 
@@ -56,6 +56,7 @@ def logout():
     session.pop('username', None)
     flash('Logged out.', 'info')
     return redirect(url_for('home'))
+
 
 if __name__ == '__main__':
     app.run(debug=True)
